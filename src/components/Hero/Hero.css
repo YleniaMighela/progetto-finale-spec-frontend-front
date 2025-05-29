@@ -1,0 +1,23 @@
+.container_hero {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px auto;
+    max-width: 1500px;
+
+}
+
+.container_hero img {
+    width: 500px;
+    height: auto;
+    border-radius: 30px;
+    padding: 20px;
+    border: 1px solid #3d6121;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.container_hero img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
