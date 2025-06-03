@@ -15,6 +15,8 @@ export default function HomePage() {
     const [error, setError] = useState(null);
     // stato per gestire il valore che viene inserito nella barra di ricerca
     const [search, setSearch] = useState('');
+    // stato per gestire la ricerca per cagetoria
+    const [category, setCategory] = useState('');
 
 
     // funzione che permette di recuperare i dati dalle piante dal backend
@@ -50,9 +52,23 @@ export default function HomePage() {
         setSearch(title)
     };
 
-    // filtro le piante che includono il titolo che viene inserito nel campo di ricerca
-    const filterPlant = plants.filter(plant => plant.title.toLowerCase().includes(search.toLowerCase()))
+    // funzione per la gestione delle categorie
 
+    const handleCategory = (e) => {
+        setCategory(e.target.value)
+    }
+
+    // filtro le piante che includono il titolo che viene inserito nel campo di ricerca
+    const filterAndCategoryPlant = plants.filter(plant => {
+        const searchTitle = plant.title.toLowerCase().includes(search.toLowerCase());
+
+        const selectCategory = category === '' || plant.category.toLowerCase() === category.toLowerCase();
+
+        // se entrambte sono true restituidvi titolo e catgorie nell'array filterAndCategoryPlant
+        return searchTitle && selectCategory;
+
+
+    })
 
     // Gestione degli stati di caricamento,errore o lista vuota
     if (loading) return <span>Caricamento piante...</span>;
@@ -73,11 +89,29 @@ export default function HomePage() {
 
             <div className='container_plant'>
                 <h1>Lista delle Piante</h1>
+                <div className='container_search'>
+                    {/* barra di ricerca */}
+                    <SearchBar search={search} setSearch={handleSearch} />
 
-                <SearchBar search={search} setSearch={handleSearch} />
+                    {/* selettore per categorie */}
+                    <div className='container_category'>
+                        <label> Categorie</label>
+                        <select
+                            value={category}
+                            onChange={handleCategory}
+                        >
+                            <option value=" ">Seleziona</option>
+                            <option value="Arbustate">Arbustate</option>
+                            <option value="Cactacea">Cactacea</option>
+                            <option value="Pendente">Pendente</option>
+                            <option value="Rosetta">Rosetta</option>
+                        </select>
+                    </div>
+
+                </div>
 
                 <div className='container_record'>
-                    {filterPlant.map((plant) => (
+                    {filterAndCategoryPlant.map((plant) => (
                         <div className='record' key={plant.id}>
                             <h3 className='title_plant'>{plant.title}</h3>
                             {plant.image && plant.image.length > 0 && (
@@ -92,6 +126,7 @@ export default function HomePage() {
                     ))}
 
                 </div>
+
             </div>
             <Hero />
         </>
