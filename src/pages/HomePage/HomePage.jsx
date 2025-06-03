@@ -62,7 +62,7 @@ export default function HomePage() {
     const filterAndCategoryPlant = plants.filter(plant => {
         const searchTitle = plant.title.toLowerCase().includes(search.toLowerCase());
 
-        const selectCategory = category === '' || plant.category.toLowerCase() === category.toLowerCase();
+        const selectCategory = category === '' || category === 'Seleziona' || plant.category.toLowerCase() === category.toLowerCase();
 
         // se entrambte sono true restituidvi titolo e catgorie nell'array filterAndCategoryPlant
         return searchTitle && selectCategory;
@@ -100,7 +100,7 @@ export default function HomePage() {
                             value={category}
                             onChange={handleCategory}
                         >
-                            <option value=" ">Seleziona</option>
+                            <option value="">Seleziona</option>
                             <option value="Arbustate">Arbustate</option>
                             <option value="Cactacea">Cactacea</option>
                             <option value="Pendente">Pendente</option>
@@ -111,22 +111,34 @@ export default function HomePage() {
                 </div>
 
                 <div className='container_record'>
-                    {filterAndCategoryPlant.map((plant) => (
-                        <div className='record' key={plant.id}>
-                            <h3 className='title_plant'>{plant.title}</h3>
-                            {plant.image && plant.image.length > 0 && (
-                                <img src={plant.image[0]} alt={plant.title}
-                                    style={{ width: '200px', height: 'auto', objectFit: 'cover' }} />
-                            )}
-                            <p className='font_category'>Categoria: {plant.category}</p>
-
-                            {/* Link per la pagina di dettaglio */}
-                            <Link to={`/plants/${plant.id}`} className='button_detail'>Vedi dettagli</Link>
+                    {/* se l'array della piante filtrate è vuoto mostro un messaggio */}
+                    {filterAndCategoryPlant.length === 0 ? (
+                        <div>
+                            Nessuna pianta trovata
+                            {search && ` per la ricerca "${search}"`}
+                            {category && category !== '' && ` nella categoria "${category}"`}
+                            .
                         </div>
-                    ))}
+                    ) : (
+                        // altrimenti mostro i dati appartenenti alla relatva ricerca
+                        filterAndCategoryPlant.map((plant) => (
+                            <div className='record' key={plant.id}>
+                                <h3 className='title_plant'>{plant.title}</h3>
+                                {plant.image && plant.image.length > 0 && (
+                                    <img
+                                        src={plant.image[0]}
+                                        alt={plant.title}
+                                        style={{ width: '200px', height: 'auto', objectFit: 'cover' }}
+                                    />
+                                )}
+                                <p className='font_category'>Categoria: {plant.category}</p>
 
+                                {/* link per la pagina di dettaglio */}
+                                <Link to={`/plants/${plant.id}`} className='button_detail'>Vedi dettagli</Link>
+                            </div>
+                        ))
+                    )}
                 </div>
-
             </div>
             <Hero />
         </>
