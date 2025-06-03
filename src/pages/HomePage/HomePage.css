@@ -59,11 +59,13 @@
 
 .title_plant {
     color: #5F8442;
+    font-weight: 800;
 }
 
 .font_category {
     font-size: 25px;
     margin-bottom: 3px;
+    font-weight: 100;
 }
 
 .button_detail {
@@ -98,4 +100,29 @@
     font-size: 15px;
     border-radius: 5px;
 
+}
+
+/* SEZIONE ORDINAMENTO */
+.container_sort {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2%;
+    padding: 20px;
+    background-color: #3d6121;
+    border-radius: 20px;
+    max-height: 30px;
+    font-weight: 500;
+    color: white;
+
+}
+
+.container_sort label {
+    font-size: 20px;
+}
+
+.container_sort select {
+    padding: 2%;
+    font-size: 15px;
+    border-radius: 5px;
 }

@@ -17,6 +17,8 @@ export default function HomePage() {
     const [search, setSearch] = useState('');
     // stato per gestire la ricerca per cagetoria
     const [category, setCategory] = useState('');
+    // stato per gestire l'ordinamento alfabetico
+    const [sortBy, setSortBy] = useState('')
 
 
     // funzione che permette di recuperare i dati dalle piante dal backend
@@ -52,22 +54,40 @@ export default function HomePage() {
         setSearch(title)
     };
 
-    // funzione per la gestione delle categorie
 
+    // funzione per la gestione delle categorie
     const handleCategory = (e) => {
         setCategory(e.target.value)
-    }
+    };
+
+    // funzione per la gestionde dell'ordinamento
+    const handleSort = (e) => {
+        setSortBy(e.target.value)
+    };
+
+
 
     // filtro le piante che includono il titolo che viene inserito nel campo di ricerca
     const filterAndCategoryPlant = plants.filter(plant => {
         const searchTitle = plant.title.toLowerCase().includes(search.toLowerCase());
-
         const selectCategory = category === '' || category === 'Seleziona' || plant.category.toLowerCase() === category.toLowerCase();
-
         // se entrambte sono true restituidvi titolo e catgorie nell'array filterAndCategoryPlant
         return searchTitle && selectCategory;
 
 
+    })
+
+    // ordino le piante filtrate, prendo tutto quello che è presente nell'arrai filtrato e ne credo una copia con lo spread
+    const sortPlants = [...filterAndCategoryPlant].sort((a, b) => {
+        // l'ordinamento è ascendente cioè a-z 
+        if (sortBy === 'ascendente') {
+            return a.title.localeCompare(b.title)
+        }
+        // l'ordinamento è discendente cioè z-a 
+        else if (sortBy === 'discendente') {
+            return b.title.localeCompare(a.title); // Ordine Z-A
+        }
+        return 0;
     })
 
     // Gestione degli stati di caricamento,errore o lista vuota
@@ -107,12 +127,25 @@ export default function HomePage() {
                             <option value="Rosetta">Rosetta</option>
                         </select>
                     </div>
+                    {/* selettore ordinamento alfabetico */}
+
+                    <div className='container_sort' >
+                        <label >Ordina:</label>
+                        <select
+                            value={sortBy}
+                            onChange={handleSort}
+                        >
+                            <option value="">Titolo</option>
+                            <option value="ascendente">Dalla A alla Z</option>
+                            <option value="discendente">Dalla Z alla A</option>
+                        </select>
+                    </div>
 
                 </div>
 
                 <div className='container_record'>
                     {/* se l'array della piante filtrate è vuoto mostro un messaggio */}
-                    {filterAndCategoryPlant.length === 0 ? (
+                    {sortPlants.length === 0 ? (
                         <div>
                             Nessuna pianta trovata
                             {search && ` per la ricerca "${search}"`}
@@ -121,7 +154,7 @@ export default function HomePage() {
                         </div>
                     ) : (
                         // altrimenti mostro i dati appartenenti alla relatva ricerca
-                        filterAndCategoryPlant.map((plant) => (
+                        sortPlants.map((plant) => (
                             <div className='record' key={plant.id}>
                                 <h3 className='title_plant'>{plant.title}</h3>
                                 {plant.image && plant.image.length > 0 && (
