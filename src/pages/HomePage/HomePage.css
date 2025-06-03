@@ -1,0 +1,62 @@
+.container_jumbo {
+    display: flex;
+    justify-content: center;
+    padding: 15px 30px;
+}
+
+.jumbo {
+
+    border: 1px solid #3d6121;
+    padding: 20px;
+    width: 85%;
+    border-radius: 30px;
+}
+
+.container_plant {
+    margin-top: 4%;
+    text-align: center;
+    font-size: 40px;
+}
+
+.container_record {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 3%;
+
+
+}
+
+.record {
+    text-align: center;
+    font-size: 30px;
+    width: 25%;
+    height: auto;
+    border-radius: 30px;
+    padding: 20px;
+    border: 1px solid #3d6121;
+}
+
+.record img {
+    margin-top: 3px;
+    border-radius: 30px;
+
+}
+
+
+.title_plant {
+    color: #5F8442;
+}
+
+.font_category {
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+
+.button_detail {
+    padding: 5px 15px;
+    background-color: #5F8442;
+    border-radius: 30px;
+    color: white
+}
