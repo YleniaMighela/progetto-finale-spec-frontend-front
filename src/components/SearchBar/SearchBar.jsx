@@ -1,9 +1,6 @@
-import { useState } from 'react';
 import './SearchBar.css'
 
-export default function SearchBar() {
-    // stato per la ricerca
-    const [search, setSearch] = useState('');
+export default function SearchBar({ search, setSearch }) {
 
     return (
         <>

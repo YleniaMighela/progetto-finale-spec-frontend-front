@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './HomePage.css'
 // importo i componenti
 import Hero from '../../components/Hero/Hero'
+import SearchBar from '../../components/SearchBar/SearchBar';
 
 export default function HomePage() {
     // stato per salvare le piante che recupero dal backend
@@ -12,6 +13,8 @@ export default function HomePage() {
     const [loading, setLoading] = useState(true);
     // stato per gestire eventuali errori
     const [error, setError] = useState(null);
+    // stato per gestire il valore che viene inserito nella barra di ricerca
+    const [search, setSearch] = useState('');
 
 
     // funzione che permette di recuperare i dati dalle piante dal backend
@@ -42,14 +45,24 @@ export default function HomePage() {
 
     }, []);
 
-    // Gestione degli stati di caricamento,errore o lista vuota
+    // funzione per aggiornare la ricerca in base al testo inserito
+    const handleSearch = (title) => {
+        setSearch(title)
+    };
 
+    // filtro le piante che includono il titolo che viene inserito nel campo di ricerca
+    const filterPlant = plants.filter(plant => plant.title.toLowerCase().includes(search.toLowerCase()))
+
+
+    // Gestione degli stati di caricamento,errore o lista vuota
     if (loading) return <span>Caricamento piante...</span>;
     if (error) return <span>Errore nel caricamento delle piante: {error}</span>;
 
     if (!loading && !error && plants.length === 0) {
         return <span>Nessuna pianta trovata.</span>;
     }
+
+
 
     return (
         <>
@@ -61,9 +74,10 @@ export default function HomePage() {
             <div className='container_plant'>
                 <h1>Lista delle Piante</h1>
 
-                <div className='container_record'>
+                <SearchBar search={search} setSearch={handleSearch} />
 
-                    {plants.map((plant) => (
+                <div className='container_record'>
+                    {filterPlant.map((plant) => (
                         <div className='record' key={plant.id}>
                             <h3 className='title_plant'>{plant.title}</h3>
                             {plant.image && plant.image.length > 0 && (
@@ -71,6 +85,7 @@ export default function HomePage() {
                                     style={{ width: '200px', height: 'auto', objectFit: 'cover' }} />
                             )}
                             <p className='font_category'>Categoria: {plant.category}</p>
+
                             {/* Link per la pagina di dettaglio */}
                             <Link to={`/plants/${plant.id}`} className='button_detail'>Vedi dettagli</Link>
                         </div>
