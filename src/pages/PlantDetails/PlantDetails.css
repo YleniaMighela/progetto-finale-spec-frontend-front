@@ -1,0 +1,73 @@
+.container_detail {
+    text-align: center;
+    margin: 3%;
+}
+
+.detail {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    border-radius: 30px;
+}
+
+.detail img {
+    padding: 3%;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    border: 1px solid #3d6121;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.detail img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+.container_description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: left;
+    font-size: 20px;
+
+
+}
+
+.container_description strong {
+    color: #5F8442;
+    font-weight: 900;
+}
+
+/* SEZIONE ICONE */
+.sun {
+
+    color: orange;
+}
+
+.water {
+    color: rgb(8, 165, 238);
+}
+
+.price {
+    color: #4ca508;
+}
+
+.difficulty {
+    color: rgba(196, 11, 97, 0.945);
+}
+
+.temperature {
+    color: rgba(196, 5, 5, 0.945);
+}
+
+.description {
+    color: #3d6121;
+}
