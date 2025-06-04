@@ -79,15 +79,22 @@ export default function HomePage() {
 
     // ordino le piante filtrate, prendo tutto quello che è presente nell'arrai filtrato e ne credo una copia con lo spread
     const sortPlants = [...filterAndCategoryPlant].sort((a, b) => {
-        // l'ordinamento è ascendente cioè a-z 
+        // l'ordinamento per il titolo è ascendente cioè a-z 
         if (sortBy === 'ascendente') {
             return a.title.localeCompare(b.title)
         }
-        // l'ordinamento è discendente cioè z-a 
+        // l'ordinamento per il titolo è discendente cioè z-a 
         else if (sortBy === 'discendente') {
-            return b.title.localeCompare(a.title); // Ordine Z-A
+            return b.title.localeCompare(a.title);
         }
-        return 0;
+        //  l'ordinamento per la categoria è ascendente cioè a-z 
+        else if (sortBy === 'categoryasc') {
+            return a.category.localeCompare(b.category);
+        }
+        // l'ordinamento per la categoria è discendente cioè z-a 
+        else if (sortBy === 'categorydisc') {
+            return b.category.localeCompare(a.category);
+        }
     })
 
     // Gestione degli stati di caricamento,errore o lista vuota
@@ -135,9 +142,12 @@ export default function HomePage() {
                             value={sortBy}
                             onChange={handleSort}
                         >
-                            <option value="">Titolo</option>
-                            <option value="ascendente">Dalla A alla Z</option>
-                            <option value="discendente">Dalla Z alla A</option>
+                            <option value="">Default</option>
+                            <option value="ascendente"> Nome dalla A alla Z</option>
+                            <option value="discendente">Nome dalla Z alla A</option>
+                            <option value="categoryasc">Categoria dalla A alla A</option>
+                            <option value="categorydisc">Categoria dalla Z alla A</option>
+
                         </select>
                     </div>
 
