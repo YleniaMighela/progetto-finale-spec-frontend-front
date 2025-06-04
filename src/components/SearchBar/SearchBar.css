@@ -10,4 +10,5 @@ input {
     font-size: 20px;
     color: white;
     font-weight: 500;
+    border: 3px solid white;
 }
