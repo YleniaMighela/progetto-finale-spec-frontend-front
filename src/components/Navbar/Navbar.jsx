@@ -6,9 +6,9 @@ export default function Navbar() {
     return (
         <>
             <div className="navbar">
-                <Link to="/">Home</Link>
-                <Link to="/compare">Confronta le piante</Link>
-                <Link to="/favorites">Lista dei desideri</Link>
+                <Link to="/" className="link">Home</Link>
+                <Link to="/compare" className="link">Confronta le piante</Link>
+                <Link to="/favorites" className="link">Lista dei desideri</Link>
 
             </div>
         </>

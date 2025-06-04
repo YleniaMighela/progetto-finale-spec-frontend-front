@@ -1,6 +1,20 @@
 .navbar {
     display: flex;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
     margin: 40px;
+
+}
+
+.link {
+    background-color: #3d6121;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
 
 }
