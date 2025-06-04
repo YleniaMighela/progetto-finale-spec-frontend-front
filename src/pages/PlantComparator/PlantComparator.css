@@ -1,0 +1,55 @@
+.comparator_page {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    min-height: 90vh;
+}
+
+.comparator_page h1 {
+    text-align: center;
+    margin: 30px;
+    color: #5F8442;
+}
+
+.compare_selectors {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+
+}
+
+.status_message {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-top: 20px;
+}
+
+.error_message {
+    font-size: 1.1rem;
+    color: #dc3545;
+    margin-top: 20px;
+}
+
+.clear_button {
+    background-color: #5F8442;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 70px;
+
+}
+
+
+/* COMPONENTI PLANTCARD */
+.compare_card {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
