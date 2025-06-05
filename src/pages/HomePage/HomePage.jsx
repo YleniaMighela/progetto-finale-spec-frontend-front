@@ -179,19 +179,15 @@ export default function HomePage() {
                                     </button>
                                 </div>
                                 {/* sezione immagine */}
-                                <h3 className='title_plant'>{plant.title}</h3>
-                                {plant.image && plant.image.length > 0 && (
-                                    <img
-                                        src={plant.image[0]}
-                                        alt={plant.title}
-                                        style={{ width: '200px', height: 'auto', objectFit: 'cover' }}
-                                    />
-                                )}
-                                <p className='font_category'>Categoria: {plant.category}</p>
+                                <div className='container_image'>
+                                    <h3 className='title_plant'>{plant.title}</h3>
+                                    <p className='font_category'>Categoria: {plant.category}</p>
 
-                                {/* link per la pagina di dettaglio */}
+                                    {/* link per la pagina di dettaglio */}
 
-                                <Link to={`/plants/${plant.id}`} className='button_detail'>Vedi dettagli</Link>
+                                    <Link to={`/plants/${plant.id}`} className='button_detail'>Vedi dettagli</Link>
+
+                                </div>
 
                             </div>
                         ))

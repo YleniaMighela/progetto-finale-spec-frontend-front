@@ -58,6 +58,10 @@
 
 }
 
+.container_image {
+    padding: 4%;
+    line-height: 50px;
+}
 
 .title_plant {
     color: #5F8442;
