@@ -13,11 +13,16 @@
 
 .container_favorites {
     min-height: 90vh;
-    text-align: center;
     font-size: 30px;
     color: #5F8442;
     margin: 30px;
 }
+
+.container_favorites h1 {
+    text-align: center;
+}
+
+
 
 .heart_filled {
     color: #fa8e00;

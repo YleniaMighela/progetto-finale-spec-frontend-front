@@ -1,7 +1,12 @@
 .container_detail {
-    text-align: center;
+
     margin: 3%;
 }
+
+.container_detail h1 {
+    text-align: center;
+}
+
 
 .detail {
     display: flex;

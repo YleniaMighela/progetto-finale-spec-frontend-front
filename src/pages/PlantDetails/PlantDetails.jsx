@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 // importo il css
 import './PlantDetails.css'
@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faDroplet, faEuroSign, faHandHoldingHeart, faTemperatureEmpty, faLeaf } from "@fortawesome/free-solid-svg-icons";
 
 export default function PlantDetails() {
+    const navigate = useNavigate();
     const { id } = useParams();
     const [plant, setPlant] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -51,6 +52,7 @@ export default function PlantDetails() {
 
     return (
         <div className='container_detail'>
+            <button onClick={() => navigate("/")} className="button_back">⬅ Torna indietro</button>
             <h1 className='title_plant'>{plant.title}</h1>
             <p className='font_category'>Categoria: {plant.category}</p>
 

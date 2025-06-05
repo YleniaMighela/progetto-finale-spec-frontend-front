@@ -62,9 +62,11 @@
 .title_plant {
     color: #5F8442;
     font-weight: 800;
+    font-size: 50px;
 }
 
 .font_category {
+    text-align: center;
     font-size: 25px;
     margin-bottom: 3px;
     font-weight: 100;

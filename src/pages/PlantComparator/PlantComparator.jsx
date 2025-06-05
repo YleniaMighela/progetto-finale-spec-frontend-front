@@ -1,4 +1,4 @@
-
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './PlantComparator.css';
 
@@ -8,6 +8,7 @@ import PlantCard from '../../components/PlantCard/PlantCard';
 
 
 export default function PlantComparator() {
+    const navigate = useNavigate();
 
     // stati che memorizzano gli ID delle piante selezionate dall'utente,inizialmente sono null e quindi mostrerà seleziona una pianta
     const [selectedPlantId1, setSelectedPlantId1] = useState(null);
@@ -101,6 +102,7 @@ export default function PlantComparator() {
 
     return (
         <div className='comparator_page'>
+            <button onClick={() => navigate("/")} className="button_back">⬅ Torna indietro</button>
             <h1>Confronta le tue piante</h1>
 
             {/* Contenitore per i due dropdown */}

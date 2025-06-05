@@ -1,6 +1,5 @@
 .comparator_page {
     padding: 20px;
-    text-align: center;
     background-color: #f9f9f9;
     min-height: 90vh;
     background-color: #c6eea838;
@@ -12,6 +11,10 @@
     color: #5F8442;
     font-size: 50px;
 
+}
+
+.comparator_page p {
+    text-align: center;
 }
 
 .compare_selectors {
