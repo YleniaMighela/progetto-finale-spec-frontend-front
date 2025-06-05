@@ -1,0 +1,49 @@
+.empty_favorites_message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    font-size: 40px;
+    color: #555;
+    font-weight: 500;
+    background-color: #5f844256;
+    text-align: center;
+
+}
+
+.container_favorites {
+    min-height: 90vh;
+    text-align: center;
+    font-size: 30px;
+    color: #5F8442;
+    margin: 30px;
+}
+
+.heart_filled {
+    color: #fa8e00;
+    font-size: 55px;
+    transition: color 0.3s ease;
+}
+
+.heart_empty {
+    color: #2e7d32;
+    font-size: 55px;
+    transition: color 0.3s ease;
+}
+
+.button_back {
+    margin: 10px;
+    padding: 8px 16px;
+    background-color: #5F8442;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.button_back:hover {
+    background-color: #6b8e23;
+
+}

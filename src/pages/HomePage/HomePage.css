@@ -24,7 +24,9 @@
 /* CONTENITORE RICERCA E CATEGORIE */
 .container_search {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    background-color: #5f844256;
+
 }
 
 
@@ -88,6 +90,7 @@
     max-height: 30px;
     font-weight: 500;
     color: white;
+    border: 3px solid white;
 }
 
 .container_category label {
@@ -104,6 +107,7 @@
 
 /* SEZIONE ORDINAMENTO */
 .container_sort {
+    border: 3px solid white;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -125,4 +129,23 @@
     padding: 2%;
     font-size: 15px;
     border-radius: 5px;
+}
+
+
+/* SEZIONE PREFERITI */
+.button_like {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+
+
+
+}
+
+
+.button_fav {
+    font-size: 25px;
+    background: none;
+    border: none;
+
 }

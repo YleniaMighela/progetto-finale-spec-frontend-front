@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useFavorites } from '../../context/FavoritesContext';
 // importo il css
 import './HomePage.css'
 // importo i componenti
@@ -20,6 +21,7 @@ export default function HomePage() {
     // stato per gestire l'ordinamento alfabetico
     const [sortBy, setSortBy] = useState('')
 
+    const { favorites, toggleFavorite, isFavorite } = useFavorites();
 
     // funzione che permette di recuperare i dati dalle piante dal backend
     useEffect(() => {
@@ -166,6 +168,17 @@ export default function HomePage() {
                         // altrimenti mostro i dati appartenenti alla relatva ricerca
                         sortPlants.map((plant) => (
                             <div className='record' key={plant.id}>
+                                {/* sezione preferiti */}
+                                <div className="button_like">
+                                    <button onClick={() => toggleFavorite(plant)} className="button_fav">
+                                        {isFavorite(plant.id) ? (
+                                            <span className="heart_filled">♥</span>
+                                        ) : (
+                                            <span className="heart_empty">♡</span>
+                                        )}
+                                    </button>
+                                </div>
+                                {/* sezione immagine */}
                                 <h3 className='title_plant'>{plant.title}</h3>
                                 {plant.image && plant.image.length > 0 && (
                                     <img
@@ -177,11 +190,14 @@ export default function HomePage() {
                                 <p className='font_category'>Categoria: {plant.category}</p>
 
                                 {/* link per la pagina di dettaglio */}
+
                                 <Link to={`/plants/${plant.id}`} className='button_detail'>Vedi dettagli</Link>
+
                             </div>
                         ))
                     )}
                 </div>
+
             </div>
             <Hero />
         </>
