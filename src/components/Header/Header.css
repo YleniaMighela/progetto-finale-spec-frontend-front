@@ -3,10 +3,55 @@ header {
     background-color: #5F8442;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 30px;
 }
 
 .title {
     font-size: 50px;
     margin: 25px;
-    color: white
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+
+/* MEDIA QUERY TABLET */
+@media (min-width: 576px) and (max-width: 991px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .title {
+        font-size: 32px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+/* MEDIA QUERY MOBILE */
+@media (max-width: 575px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .title {
+        font-size: 24px;
+        text-align: center;
+        margin: 0;
+        gap: 5px;
+    }
 }

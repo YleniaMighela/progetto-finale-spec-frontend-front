@@ -39,6 +39,9 @@
 }
 
 .clear_button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #5F8442;
     color: white;
     padding: 10px 20px;
@@ -58,4 +61,69 @@
     gap: 30px;
     flex-wrap: wrap;
     margin-top: 40px;
+}
+
+
+
+
+
+
+/* MEDIA QUERY TABLET */
+@media (max-width: 991px) {
+    .comparator_page {
+        padding: 15px;
+    }
+
+    .comparator_page h1 {
+        font-size: 40px;
+        margin: 25px 0;
+    }
+
+    .compare_selectors {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .status_message {
+        font-size: 25px;
+        margin-top: 15px;
+    }
+
+    .clear_button {
+        padding: 8px 15px;
+        font-size: 18px;
+        margin-top: 50px;
+    }
+
+    .compare_card {
+        gap: 15px;
+        margin-top: 30px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 10px;
+    }
+
+
+    .compare_card .plant_card_container {
+        min-width: 300px;
+        flex-shrink: 0;
+        width: 48%;
+    }
+
+}
+
+
+
+
+/* MEDIA QUERY MOBILE */
+@media (max-width: 575px) {
+    .compare_card {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+    }
+
 }

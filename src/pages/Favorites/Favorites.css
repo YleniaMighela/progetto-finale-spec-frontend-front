@@ -52,3 +52,23 @@
     background-color: #6b8e23;
 
 }
+
+
+
+
+/* MEDIA QUERY TABLET */
+@media (max-width: 991px) {
+    .container_favorites h1 {
+        margin-top: 13%;
+    }
+}
+
+
+/* MEDIA QUERY MOBILE */
+@media (max-width: 575px) {
+    .empty_favorites_message {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

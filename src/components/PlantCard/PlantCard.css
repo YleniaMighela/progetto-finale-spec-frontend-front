@@ -32,3 +32,75 @@
     color: #666;
     margin-bottom: 10px;
 }
+
+
+
+
+/* MEDIA QUERY TABLET */
+@media (max-width: 991px) {
+    .plant_card {
+        width: 48%;
+        padding: 15px;
+    }
+
+    .plant_card .title_plant {
+        font-size: 35px;
+    }
+
+    .plant_card .plant_image {
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .plant_card .font_category {
+        font-size: 1rem;
+    }
+
+    .plant_card .container_description p {
+        font-size: 16px;
+    }
+}
+
+
+
+/* MEDIA QUERY MOBILE */
+@media (max-width: 575px) {
+    .plant_card {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        max-width: 350px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    .plant_card .title_plant {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .plant_card .plant_image {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .plant_card .font_category {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .plant_card .container_description {
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .plant_card .container_description p {
+        text-align: center;
+
+    }
+}
