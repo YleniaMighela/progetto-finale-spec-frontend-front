@@ -9,7 +9,6 @@ export default function Footer() {
 
     return (
         <footer>
-
             <div className="footer-left">
                 <span>Termini e condizioni</span>
                 <span className="footer-none">Contatti  +39 3424395784</span>
@@ -21,14 +20,7 @@ export default function Footer() {
                 <span><FontAwesomeIcon icon={faInstagram} size="2x" color="#E1306C" /></span>
                 <span><FontAwesomeIcon icon={faFacebook} size="2x" color="#1877F2" /></span>
                 <span><FontAwesomeIcon icon={faWhatsapp} size="2x" color="#25D366" /></span>
-
-
-
             </div>
-
-
-
-
         </footer>
 
     )
