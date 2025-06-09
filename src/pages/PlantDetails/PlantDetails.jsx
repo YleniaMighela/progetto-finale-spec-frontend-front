@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-
+import { useFavorites } from '../../context/FavoritesContext';
 // importo il css
 import './PlantDetails.css'
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faDroplet, faEuroSign, faHandHoldingHeart, faTemperatureEmpty, faLeaf } from "@fortawesome/free-solid-svg-icons";
 
@@ -12,6 +13,9 @@ export default function PlantDetails() {
     const [plant, setPlant] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    // hooh per gestione preferiti dal context globale
+    const { toggleFavorite, isFavorite } = useFavorites();
 
     useEffect(() => {
         const fetchPlant = async () => {
@@ -56,6 +60,20 @@ export default function PlantDetails() {
             <h1 className='title_plant'>{plant.title}</h1>
             <p className='font_category'>Categoria: {plant.category}</p>
 
+
+            {/* Nuovo bottone per aggiungere/rimuovere dai preferiti */}
+            <div className="favorite_button_container">
+                <button
+                    onClick={() => toggleFavorite(plant)}
+                    className="button_fav_detail" // Usa una classe specifica per lo stile
+                >
+                    {isFavorite(plant.id) ? (
+                        <span className="heart_filled_detail">♥ Aggiunto ai Preferiti</span>
+                    ) : (
+                        <span className="heart_empty_detail">♡ Aggiungi ai Preferiti</span>
+                    )}
+                </button>
+            </div>
             <div className='detail'>
                 {plant.image && plant.image.map((imgPath, index) => (
                     <img
