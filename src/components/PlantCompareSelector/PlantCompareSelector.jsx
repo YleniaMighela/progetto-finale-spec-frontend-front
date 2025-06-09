@@ -20,7 +20,8 @@ export default function PlantCompareSelector({ plants, selectedId, onSelect }) {
                 {/* mappa tutte le piante */}
                 {plants.map((plant) => (
                     <option key={plant.id} value={plant.id}>
-                        {plant.title}
+                        Nome:{plant.title}
+                        Categoria: {plant.category}
                     </option>
                 ))}
             </select>

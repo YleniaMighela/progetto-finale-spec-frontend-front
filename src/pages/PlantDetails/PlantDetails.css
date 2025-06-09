@@ -38,12 +38,20 @@
 .container_description {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
-    gap: 20px;
-    text-align: left;
-    font-size: 20px;
+    gap: 15px;
 
+}
 
+.container_description p {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 18px;
+    color: black;
 }
 
 .container_description strong {
@@ -53,26 +61,38 @@
 
 /* SEZIONE ICONE */
 .sun {
+    flex-shrink: 0;
+    font-size: 1.2em;
     color: orange;
 }
 
 .water {
+    flex-shrink: 0;
+    font-size: 1.2em;
     color: rgb(8, 165, 238);
 }
 
 .price {
+    flex-shrink: 0;
+    font-size: 1.2em;
     color: #4ca508;
 }
 
 .difficulty {
+    flex-shrink: 0;
+    font-size: 1.2em;
     color: rgba(196, 11, 97, 0.945);
 }
 
 .temperature {
+    flex-shrink: 0;
+    font-size: 1.2em;
     color: rgba(196, 5, 5, 0.945);
 }
 
 .description {
+    flex-shrink: 0;
+    font-size: 1.2em;
     color: #3d6121;
 }
 

@@ -87,7 +87,7 @@ export default function PlantDetails() {
                 <div className='container_description' >
                     <p><FontAwesomeIcon icon={faLeaf} className='description' /><strong> Descrizione: </strong>{plant.description}</p>
                     <p><FontAwesomeIcon icon={faSun} className='sun' /><strong> Esposizione: </strong>  {plant.light}</p>
-                    <p><FontAwesomeIcon icon={faDroplet} className='water' /><strong> Annaffiatura: </strong> {plant.water}</p>
+                    <p><FontAwesomeIcon icon={faDroplet} className='water' /><strong> Annaffiatura: </strong>{plant.water}</p>
                     <p><FontAwesomeIcon icon={faTemperatureEmpty} className='temperature' /><strong> Temperatura: </strong>{plant.temperature}</p>
                     <p><FontAwesomeIcon icon={faHandHoldingHeart} className='difficulty' /><strong> Difficoltà: </strong>{plant.difficulty}</p>
                     <p><FontAwesomeIcon icon={faEuroSign} className='price' /><strong> Prezzo: </strong>{plant.price}€ </p>
