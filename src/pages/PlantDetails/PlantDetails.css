@@ -167,7 +167,7 @@
 
 
 /* MEDIA QUERY TABLET */
-@media (max-width: 991px) {
+@media (min-width: 992px) and (max-width: 1280px) {
     .container_detail {
         margin: 2% auto;
         padding: 0 10px;
@@ -222,7 +222,7 @@
 
 
 /* MEDIA QUERY MOBILE */
-@media (max-width: 575px) {
+@media (min-width: 478px) and (max-width: 992px) {
     .container_detail {
         margin: 1% auto;
         padding: 0 5px;
@@ -239,6 +239,9 @@
     }
 
     .detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 15px;
         padding: 15px;
         max-width: 98%;
@@ -246,6 +249,8 @@
     }
 
     .detail img {
+        display: block;
+        margin: 0 auto;
         width: 100%;
         max-width: 300px;
         padding: 5px;
@@ -273,5 +278,67 @@
     .heart_filled_detail,
     .heart_empty_detail {
         font-size: 1.3rem;
+    }
+}
+
+/* MEDIA QUERY SMARTPHONE PICCOLI (fino a 477px) */
+@media (max-width: 477px) {
+    .container_detail {
+        margin: 1% auto;
+        padding: 0 5px;
+    }
+
+    .container_detail .title_plant {
+        font-size: 26px;
+        margin: 12px 0;
+    }
+
+    .container_detail .font_category {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        max-width: 95%;
+        margin: 2% auto;
+    }
+
+    .detail img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 230px;
+        height: auto;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .container_description {
+        width: 95%;
+        font-size: 16px;
+        text-align: center;
+        padding: 0 8px;
+        gap: 8px;
+    }
+
+    .button_back {
+        font-size: 14px;
+        padding: 5px 10px;
+        margin: 5px;
+    }
+
+    .button_fav_detail {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .heart_filled_detail,
+    .heart_empty_detail {
+        font-size: 1.2rem;
     }
 }

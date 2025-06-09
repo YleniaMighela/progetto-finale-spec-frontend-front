@@ -147,7 +147,7 @@ export default function HomePage() {
                             <option value="">Default</option>
                             <option value="ascendente"> Nome dalla A alla Z</option>
                             <option value="discendente">Nome dalla Z alla A</option>
-                            <option value="categoryasc">Categoria dalla A alla A</option>
+                            <option value="categoryasc">Categoria dalla A alla Z</option>
                             <option value="categorydisc">Categoria dalla Z alla A</option>
 
                         </select>

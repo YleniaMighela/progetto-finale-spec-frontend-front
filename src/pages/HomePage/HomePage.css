@@ -169,7 +169,7 @@
 
 
 /* MEDIA QUERY TABLET */
-@media (min-width: 576px) and (max-width: 991px) {
+@media (min-width: 576px) and (max-width: 1280px) {
     .container_plant {
         font-size: 30px;
     }
@@ -218,7 +218,30 @@
 
 
 
+.button_compare_action {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
+.button_compare_action:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.go_to_compare_button {
+    display: inline-block;
+    margin: 1em 0;
+    padding: 0.6em 1.2em;
+    background-color: #008CBA;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
 
 
 

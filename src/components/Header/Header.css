@@ -44,6 +44,7 @@ header {
 /* MEDIA QUERY MOBILE */
 @media (max-width: 575px) {
     header {
+        position: static;
         flex-direction: column;
         align-items: center;
         height: auto;

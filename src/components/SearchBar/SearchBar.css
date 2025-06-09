@@ -4,6 +4,7 @@
     justify-content: center;
     gap: 10px;
     width: 30%;
+
 }
 
 .searchbar input {
@@ -17,6 +18,10 @@
     font-weight: 500;
     border: 3px solid white;
     border-radius: 5px;
+}
+
+input::placeholder {
+    color: white;
 }
 
 
