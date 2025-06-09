@@ -1,0 +1,321 @@
+[
+    {
+        "id": 1,
+        "title": "Adenium",
+        "category": "Arbustate",
+        "description": "L’Adenium obesum, conosciuto comunemente come Rosa del Deserto, è una pianta succulenta dall’aspetto esotico e affascinante, appartenente alla famiglia delle Apocynaceae. Originario delle zone aride dell’Africa orientale e della Penisola Arabica",
+        "image": [
+            "/piante/arbustate/adenium/adenium1.jpg",
+            "/piante/arbustate/adenium/adenium2.jpg",
+            "/piante/arbustate/adenium/adenium3.jpg"
+        ],
+        "light": "L’Adenium ama la luce piena e il sole diretto.",
+        "water": "In estate richiede annaffiature moderate solo quando il terreno è ben asciutto. Durante l'inverno entra in riposo vegetativo: va tenuto completamente asciutto",
+        "temperature": "Non tollera temperature inferiori ai 10 °C.",
+        "difficulty": "Media",
+        "price": 27.33
+    },
+    {
+        "id": 2,
+        "title": "Aeonium",
+        "category": "Arbustate",
+        "description": "L’Aeonium è un genere di piante succulente originario delle regioni subtropicali e temperate dell’Africa, specialmente delle Canarie. Ha rosette di foglie carnose e fiori a ombrella che sbocciano in estate o inverno, a seconda della specie.",
+        "image": [
+            "/piante/arbustate/aeonium/aeonium1.jpg",
+            "/piante/arbustate/aeonium/aeonium2.jpg",
+            "/piante/arbustate/aeonium/aeonium3.jpg"
+        ],
+        "light": "Ama la luce brillante ma preferisce evitare il sole diretto nelle ore più calde per evitare scottature.",
+        "water": "Annaffiature moderate: lascia asciugare il terreno tra un’annaffiatura e l’altra. In inverno riduci molto l’irrigazione, evitando ristagni d’acqua.",
+        "temperature": "Tollera temperature fino a circa 5-7 °C, ma preferisce temperature miti tra 10 e 25 °C.",
+        "difficulty": "Media",
+        "price": 15.90
+    },
+    {
+        "id": 3,
+        "title": "Crassula",
+        "category": "Arbustate",
+        "description": "La Crassula è una varietà di Crassula ovata, nota anche come albero di giada, ed è una pianta grassa molto apprezzata per il suo aspetto unico e le sue foglie particolari",
+        "image": [
+            "/piante/arbustate/crassula/crassula1.jpg",
+            "/piante/arbustate/crassula/crassula2.jpg",
+            "/piante/arbustate/crassula/crassula3.jpg"
+        ],
+        "light": "Richiede molta luce, preferibilmente diretta, per mantenere la forma delle sue foglie e stimolare la fioritura.",
+        "water": "L'acqua deve essere somministrata solo quando il terreno è completamente asciutto. Durante l'inverno, le annaffiature possono essere ulteriormente ridotte.",
+        "temperature": "Teme il freddo e le temperature sotto lo zero, quindi è consigliabile tenerla in ambienti interni.",
+        "difficulty": "Facile",
+        "price": 119.95
+    },
+    {
+        "id": 4,
+        "title": "Euphorbia",
+        "category": "Arbustate",
+        "description": "L’Euphorbia conosciuta anche come'Tabaiba dulce', nome locale delle Canarie. In natura, questa pianta cresce in ambienti desertici e costieri, sviluppandosi come un piccolo arbusto succulento dal portamento cespuglioso.",
+        "image": [
+            "/piante/arbustate/euphorbia/euphorbia1.jpg",
+            "/piante/arbustate/euphorbia/euphorbia2.jpg"
+        ],
+        "light": "Predilige luce intensa e pieno sole",
+        "water": "Innaffiare con moderazione durante la primavera e l’estate, attendendo che il terreno sia completamente asciutto prima di bagnare nuovamente. In inverno, ridurre drasticamente le annaffiature",
+        "temperature": "Tollera temperature minime di 5-7°C",
+        "difficulty": "Media",
+        "price": 52.95
+    },
+    {
+        "id": 5,
+        "title": "Macodes",
+        "category": "Arbustate",
+        "description": "Conosciuta come Monstera minima o 'filodendro a quattro foglie' è una pianta da interno popolare per la sua bellezza e facilità di coltivazione.",
+        "image": [
+            "/piante/arbustate/macodes/macodes1.jpg",
+            "/piante/arbustate/macodes/macodes2.jpg"
+        ],
+        "light": " preferisce una luce indiretta brillante, ma non diretta alla luce solare. Troppo luce diretta può bruciare le foglie.",
+        "water": "La pianta non deve mai essere lasciata in acqua stagnante, poiché questo può causare il marciume delle radici. Innaffiare regolarmente, ma permettere al terreno di asciugarsi leggermente tra un'irrigazione e l'altra",
+        "temperature": "cresce meglio in un ambiente caldo e umido. La temperatura ideale per la pianta è tra i 18°C e i 30°C",
+        "difficulty": "Media",
+        "price": 14.95
+    },
+    {
+        "id": 6,
+        "title": "Cereus",
+        "category": "Cactacea",
+        "description": "Il Cereus è un cactus dalla caratteristica forma a spirale, appartenente alla famiglia delle Cactaceae. È originario dell'America Meridionale, in particolare dalla Bolivia fino al nord dell'Argentina centrale. Si tratta di una pianta succulenta che cresce prevalentemente in ambienti desertici o in zone arbustive secche.",
+        "image": [
+            "/piante/cactacea/cereus/cereus1.jpg",
+            "/piante/cactacea/cereus/cereus2.jpg",
+            "/piante/cactacea/cereus/cereus3.jpg"
+        ],
+        "light": "Ama la luce intensa e il pieno sole.",
+        "water": "Richiede irrigazioni molto scarse. Durante l’inverno è consigliabile tenerla al riparo dal freddo e dal gelo. Può essere coltivata anche in casa, purché in una posizione ben illuminata.",
+        "temperature": "Cresce meglio in ambienti caldi e leggermente umidi. La temperatura ideale è compresa tra i 18°C e i 30°C.",
+        "difficulty": "Facile",
+        "price": 14.95
+    },
+    {
+        "id": 7,
+        "title": "Echinocactus crestato",
+        "category": "Cactacea",
+        "description": "L'Echinocactus crestato è una pianta succulenta appartenente alla famiglia delle Cactaceae. È originaria del Messico ed è molto apprezzata per il suo aspetto unico e decorativo.",
+        "image": [
+            "/piante/cactacea/echinocactus/echinocactus1.jpg",
+            "/piante/cactacea/echinocactus/echinocactus2.jpg",
+            "/piante/cactacea/echinocactus/echinocactus3.jpg"
+        ],
+        "light": "Ama la luce intensa e il pieno sole.",
+        "water": "L'Echinocactus crestato è una pianta succulenta che si adatta bene a periodi di siccità. Innaffia moderatamente solo quando il terreno è completamente asciutto. Durante i mesi invernali, riduci o sospendi le innaffiature poiché la pianta è in uno stato di riposo.",
+        "temperature": "Questa pianta si sviluppa meglio in ambienti caldi, con temperature comprese tra i 18°C e i 27°C.",
+        "difficulty": "Facile",
+        "price": 40.95
+    },
+    {
+        "id": 8,
+        "title": "Ferocactus stainesii",
+        "category": "Cactacea",
+        "description": "È un cactus dalla forma distintiva e imponente, apprezzato per la sua bellezza e resistenza. È originario delle regioni aride del Messico (Jalisco) e appartiene alla famiglia delle Cactaceae , una leggendaria famiglia di piante apprezzata per le forme robuste e le spine spesso impressionanti.",
+        "image": [
+            "/piante/cactacea/ferocactus/ferocactus1.jpg",
+            "/piante/cactacea/ferocactus/ferocactus2.jpg",
+            "/piante/cactacea/ferocactus/ferocactus3.jpg"
+        ],
+        "light": "Richiede pieno sole per la maggior parte del giorno.",
+        "water": "Necessita di poca acqua. L'irrigazione deve essere moderata in estate e quasi assente in inverno.",
+        "temperature": " Preferisce il clima caldo e resiste a brevi periodi di freddo, ma non tollera il gelo prolungato.",
+        "difficulty": "Facile",
+        "price": 26.95
+    },
+    {
+        "id": 9,
+        "title": "Myrtillocactus geometrizans",
+        "category": "Cactacea",
+        "description": "È noto anche con nomi comuni come cactus mirtillo,è una pianta grassa appartenente alla famiglia delle Cactaceae, originaria del Messico. Questa varietà si distingue per le sue sfumature variegate giallo-verdi.",
+        "image": [
+            "/piante/cactacea/mirtillo/myrtillocactus1.jpg",
+            "/piante/cactacea/mirtillo/myrtillocactus2.jpg",
+            "/piante/cactacea/mirtillo/myrtillocactus3.jpg"
+        ],
+        "light": "Predilige luoghi luminosi e soleggiati, con almeno 6 ore di luce diretta al giorno.",
+        "water": "Annaffiare moderatamente in estate e ridurre drasticamente in inverno.",
+        "temperature": " Tollera temperature elevate, ma non resiste bene al gelo. In inverno è consigliato tenerlo a temperature superiori ai 5°C.",
+        "difficulty": "Media",
+        "price": 35.95
+    },
+    {
+        "id": 10,
+        "title": "Rhipsalis baccifera ",
+        "category": "Cactacea",
+        "description": "Questa particolare sottospecie della Rhipsalis baccifera, chiamata horrida, si distingue per i fusti allungati e sottili, ricoperti da piccole areole biancastre che conferiscono un aspetto 'piumoso'.Le sue ramificazioni cadenti creano un effetto scenografico in vasi sospesi o in ciotole da appoggio",
+        "image": [
+            "/piante/cactacea/rhipsalis/rhipsalis1.jpg",
+            "/piante/cactacea/rhipsalis/rhipsalis2.jpg",
+            "/piante/cactacea/rhipsalis/rhipsalis3.jpg"
+        ],
+        "light": "Predilige luce indiretta o mezz’ombra, evitando il sole diretto troppo forte che potrebbe bruciare i fusti.",
+        "water": "Ama l’umidità moderata, annaffiature regolari durante la primavera e l’estate lasciando asciugare leggermente il terreno tra un’annaffiatura e l’altra. In inverno ridurre molto l’irrigazione, mantenendo il terreno quasi asciutto.",
+        "temperature": " Preferisce temperature miti tra 15°C e 25°C. Non sopporta il gelo.",
+        "difficulty": "Facile",
+        "price": 35.95
+    },
+    {
+        "id": 11,
+        "title": "Ceropegia woodii",
+        "category": "Pendente",
+        "description": "La Ceropegia woodii, conosciuta anche come 'collana di cuori', è una pianta succulenta da interno molto apprezzata per le sue foglie a forma di cuore e i lunghi rami ricadenti. Elegante e facile da coltivare, è perfetta per vasi sospesi e mensole.",
+        "image": [
+            "/piante/pendenti/ceropegia/ceropegia1.jpg",
+            "/piante/pendenti/ceropegia/ceropegia2.jpg",
+            "/piante/pendenti/ceropegia/ceropegia3.jpg",
+            "/piante/pendenti/ceropegia/ceropegia4.jpg"
+        ],
+        "light": "Ama ambienti luminosi con luce indiretta. Tollera un po’ di sole diretto, ma va evitato quello troppo forte.",
+        "water": "Annaffiare solo quando il terreno è completamente asciutto. In inverno le irrigazioni devono essere molto diradate.",
+        "temperature": "Preferisce temperature tra i 18°C e i 25°C. Non tollera il gelo e va tenuta sopra i 10°C.",
+        "difficulty": "Facile",
+        "price": 5.95
+    },
+    {
+        "id": 12,
+        "title": "Hoya burtoniae",
+        "category": "Pendente",
+        "description": "La Hoya burtoniae è una pianta tropicale epifita con foglie piccole e vellutate, di colore verde scuro con riflessi rossastri. È ideale per vasi sospesi grazie al suo portamento ricadente. Produce fiori cerosi, rosa intenso o rossi, dal profumo dolce e intenso.",
+        "image": [
+            "/piante/pendenti/hoya/hoya1.jpg",
+            "/piante/pendenti/hoya/hoya2.jpg",
+            "/piante/pendenti/hoya/hoya3.jpg",
+            "/piante/pendenti/hoya/hoya4.jpg"
+        ],
+        "light": "Ama ambienti molto luminosi con luce indiretta. Un po’ di sole diretto al mattino può stimolare la fioritura.",
+        "water": "Annaffiare solo quando il terreno è quasi completamente asciutto. In inverno ridurre le irrigazioni. Gradisce umidità moderata.",
+        "temperature": "Preferisce temperature tra 18°C e 26°C. Non tollera il freddo sotto i 10°C.",
+        "difficulty": "Media",
+        "price": 29.90
+    },
+    {
+        "id": 13,
+        "title": "Peperomia prostrata 'Baby'",
+        "category": "Pendente",
+        "description": "La Peperomia prostrata 'Baby', conosciuta anche come 'String of Turtles', è una pianta succulenta tropicale dalle piccole foglie tonde con venature argentate che ricordano il guscio di una tartaruga. Compatta e ornamentale, è ideale per piccoli vasi sospesi o terrari.",
+        "image": [
+            "/piante/pendenti/peperomia/peperomia1.jpg",
+            "/piante/pendenti/peperomia/peperomia2.jpg",
+            "/piante/pendenti/peperomia/peperomia3.jpg",
+            "/piante/pendenti/peperomia/peperomia4.jpg"
+        ],
+        "light": "Predilige luce indiretta e diffusa. Evitare l’esposizione diretta al sole.",
+        "water": "Annaffiare solo quando il terreno è completamente asciutto. Teme il ristagno idrico. In inverno ridurre le annaffiature.",
+        "temperature": "Ama temperature comprese tra 18°C e 24°C. Non tollera il freddo sotto i 10°C.",
+        "difficulty": "Facile",
+        "price": 9.90
+    },
+    {
+        "id": 14,
+        "title": "Senecio rowleyanus 'Baby'",
+        "category": "Pendente",
+        "description": "Il Senecio rowleyanus 'Baby', conosciuto anche come 'String of Pearls', è una pianta succulenta dal portamento ricadente, caratterizzata da foglie sferiche che ricordano piccole perle verdi. Ideale per vasi sospesi, è decorativa e facile da coltivare.",
+        "image": [
+            "/piante/pendenti/rosario/rosario1.jpg",
+            "/piante/pendenti/rosario/rosario2.jpg",
+            "/piante/pendenti/rosario/rosario3.jpg",
+            "/piante/pendenti/rosario/rosario4.jpg"
+        ],
+        "light": "Ama la luce intensa ma indiretta. Tollera il sole diretto del mattino.",
+        "water": "Annaffiare solo quando il terreno è completamente asciutto. Evitare ristagni idrici. In inverno, irrigare raramente.",
+        "temperature": "Preferisce temperature tra 18°C e 26°C. Va protetta dal gelo e tenuta sopra i 10°C.",
+        "difficulty": "Facile",
+        "price": 11.50
+    },
+    {
+        "id": 15,
+        "title": "Sedum sieboldii ‘Teresina’",
+        "category": "Pendente",
+        "description": "Il Sedum sieboldii ‘Teresina’ è una pianta succulenta rustica dal portamento arcuato o ricadente, con foglie tonde verde-blu dai bordi rosati. In autunno produce fiori rosa a stella molto decorativi. È ideale per vasi sospesi o bordure.",
+        "image": [
+            "/piante/pendenti/sedum/sedum1.jpg",
+            "/piante/pendenti/sedum/sedum2.jpg",
+            "/piante/pendenti/sedum/sedum3.jpg",
+            "/piante/pendenti/sedum/sedum4.jpg"
+        ],
+        "light": "Ama il pieno sole ma cresce bene anche in mezz’ombra leggera.",
+        "water": "Annaffiare solo quando il terreno è completamente asciutto. Molto resistente alla siccità.",
+        "temperature": "Tollera il freddo fino a -5°C. In estate preferisce temperature tra 18°C e 28°C.",
+        "difficulty": "Facile",
+        "price": 6.90
+    },
+    {
+        "id": 16,
+        "title": "Echeveria",
+        "category": "Rosetta",
+        "description": "L’Echeveria è una pianta succulenta dalla forma a rosetta, molto apprezzata per le sue foglie carnose dai colori variabili. Ideale per vasi decorativi, terrari o giardini rocciosi, è facile da coltivare e richiede poche cure.",
+        "image": [
+            "/piante/rosettate/e/e1.jpg",
+            "/piante/rosettate/e/e2.jpg"
+        ],
+        "light": "Ama la luce intensa e il sole diretto per alcune ore al giorno.",
+        "water": "Annaffiare solo a terreno completamente asciutto. Evitare ristagni e bagnare le foglie.",
+        "temperature": "Predilige temperature tra 18°C e 28°C. Va protetta dal gelo.",
+        "difficulty": "Facile",
+        "price": 4.90
+    },
+    {
+        "id": 17,
+        "title": "Graptopetalum bellum",
+        "category": "Rosetta",
+        "description": "Il Graptopetalum bellum è una succulenta a rosetta compatta, nota per i suoi grandi fiori rosa a stella. Le foglie carnose di colore grigio-verde con sfumature rosate lo rendono ideale per piccoli vasi e collezioni da interno.",
+        "image": [
+            "/piante/rosettate/eche/eche1.jpg",
+            "/piante/rosettate/eche/eche2.jpg",
+            "/piante/rosettate/eche/eche3.jpg"
+        ],
+        "light": "Preferisce luce intensa ma indiretta. Bene anche il sole diretto del mattino.",
+        "water": "Annaffiare solo a terreno completamente asciutto. Evitare assolutamente ristagni.",
+        "temperature": "Predilige temperature tra 18°C e 28°C. Da proteggere sotto i 10°C.",
+        "difficulty": "Facile",
+        "price": 6.50
+    },
+    {
+        "id": 18,
+        "title": "Echeveria ‘Compton Carousel’",
+        "category": "Rosetta",
+        "description": "L’Echeveria ‘Compton Carousel’ è una varietà ibrida ornamentale con foglie carnose grigio-azzurre e bordature crema. Di crescita lenta ma molto decorativa, è perfetta per collezioni e vasi eleganti.",
+        "image": [
+            "/piante/rosettate/echeveria/echeveria1.jpg",
+            "/piante/rosettate/echeveria/echeveria2.jpg"
+        ],
+        "light": "Ama la luce intensa ma filtrata. Evitare il sole diretto nelle ore più calde.",
+        "water": "Annaffiare solo a terreno completamente asciutto. Evitare acqua stagnante e foglie bagnate.",
+        "temperature": "Tra 18°C e 28°C. Va protetta dal gelo e dalle basse temperature.",
+        "difficulty": "Media",
+        "price": 19.90
+    },
+    {
+        "id": 19,
+        "title": "Graptoveria ‘Starfire’",
+        "category": "Rosetta",
+        "description": "La Graptoveria ‘Starfire’ è un ibrido succulento compatto dalle foglie carnose grigio-verdi che assumono sfumature rosse o corallo con il sole. Facile da coltivare e molto decorativa, è ideale per balconi e composizioni.",
+        "image": [
+            "/piante/rosettate/graptoveria/graptoveria1.jpg",
+            "/piante/rosettate/graptoveria/graptoveria2.jpg"
+        ],
+        "light": "Ama la luce intensa e il sole diretto. Il colore si intensifica con più luce.",
+        "water": "Annaffiare solo a terreno asciutto. Evitare ristagni idrici.",
+        "temperature": "Tra 15°C e 30°C. Va protetta dal gelo.",
+        "difficulty": "Media",
+        "price": 6.90
+    },
+    {
+        "id": 20,
+        "title": "Semponium ‘Diamond’",
+        "category": "Rosetta",
+        "description": "Il Semponium ‘Diamond’ è un ibrido tra Sempervivum e Aeonium, dalla rosetta brillante verde-giallo e foglie carnose e lucide. Raro, elegante e decorativo, è ideale per esposizioni luminose e collezioni di succulente.",
+        "image": [
+            "/piante/rosettate/semponium/semponium1.jpg",
+            "/piante/rosettate/semponium/semponium2.jpg"
+        ],
+        "light": "Ama luce intensa e sole diretto, ma tollera anche mezz'ombra luminosa.",
+        "water": "Annaffiare solo quando il terreno è completamente asciutto. In inverno quasi nulla.",
+        "temperature": "Tra 15°C e 28°C. Da proteggere sotto i 10°C.",
+        "difficulty": "Media",
+        "price": 29.90
+    }
+]
