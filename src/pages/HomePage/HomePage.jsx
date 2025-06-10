@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+
+// importo il context
 import { useFavorites } from '../../context/FavoritesContext';
+
 // importo il css
 import './HomePage.css'
+
 // importo i componenti
 import Hero from '../../components/Hero/Hero'
 import SearchBar from '../../components/SearchBar/SearchBar';
@@ -36,6 +40,7 @@ export default function HomePage() {
                 }
                 // altrimenti converte la risposta in formato Json
                 const data = await response.json();
+                // aggiorna lo stato con le piante recuperate
                 setPlants(data);
 
             } catch (err) {
@@ -50,6 +55,7 @@ export default function HomePage() {
         fetchPlants();
 
     }, []);
+
 
     // funzione per aggiornare la ricerca in base al testo inserito
     const handleSearch = (title) => {
@@ -71,29 +77,31 @@ export default function HomePage() {
 
     // filtro le piante che includono il titolo che viene inserito nel campo di ricerca
     const filterAndCategoryPlant = plants.filter(plant => {
+        // verifica se il titolo di una pianta include una specifica parola che l'utente sta cercando, ignorando se le lettere sono maiuscole o minuscole.
         const searchTitle = plant.title.toLowerCase().includes(search.toLowerCase());
+        // verifica se la categoria della pianta corrisponde alla categoria che l'utente ha selezionato
         const selectCategory = category === '' || category === 'Seleziona' || plant.category.toLowerCase() === category.toLowerCase();
-        // se entrambte sono true restituidvi titolo e catgorie nell'array filterAndCategoryPlant
+        // se entrambe sono true restituisci titolo e categorie nell'array filterAndCategoryPlant
         return searchTitle && selectCategory;
 
 
     })
 
-    // ordino le piante filtrate, prendo tutto quello che è presente nell'arrai filtrato e ne credo una copia con lo spread
+    // ordino le piante filtrate, prendo tutto quello che è presente nell'array filtrato e ne creo una copia con lo spread
     const sortPlants = [...filterAndCategoryPlant].sort((a, b) => {
-        // l'ordinamento per il titolo è ascendente cioè a-z 
+        // se l'ordinamento per il titolo è ascendente ritorna dalla a-z 
         if (sortBy === 'ascendente') {
             return a.title.localeCompare(b.title)
         }
-        // l'ordinamento per il titolo è discendente cioè z-a 
+        // altrimenti se l'ordinamento per il titolo è discendente ritorna dalla z-a 
         else if (sortBy === 'discendente') {
             return b.title.localeCompare(a.title);
         }
-        //  l'ordinamento per la categoria è ascendente cioè a-z 
+        // altrimenti se  l'ordinamento per la categoria è ascendente ritorna dalla a-z 
         else if (sortBy === 'categoryasc') {
             return a.category.localeCompare(b.category);
         }
-        // l'ordinamento per la categoria è discendente cioè z-a 
+        // altrimenti se l'ordinamento per la categoria è discendente ritorna dalla z-a 
         else if (sortBy === 'categorydisc') {
             return b.category.localeCompare(a.category);
         }
@@ -119,10 +127,10 @@ export default function HomePage() {
             <div className='container_plant'>
                 <h1>Lista delle Piante</h1>
                 <div className='container_search'>
-                    {/* barra di ricerca */}
+                    {/* BARRA DI RICERCA */}
                     <SearchBar search={search} setSearch={handleSearch} />
 
-                    {/* selettore per categorie */}
+                    {/* SELETTORE PER CATEGORIE */}
                     <div className='container_category'>
                         <label> Categorie</label>
                         <select
@@ -136,7 +144,10 @@ export default function HomePage() {
                             <option value="Rosetta">Rosetta</option>
                         </select>
                     </div>
-                    {/* selettore ordinamento alfabetico */}
+
+
+
+                    {/* SELETTORE PER ORDINAMENTO ALFABETICO */}
 
                     <div className='container_sort' >
                         <label >Ordina:</label>
@@ -165,10 +176,11 @@ export default function HomePage() {
                             .
                         </div>
                     ) : (
-                        // altrimenti mostro i dati appartenenti alla relatva ricerca
+                        // altrimenti mostro i dati appartenenti alla relativa ricerca
                         sortPlants.map((plant) => (
                             <div className='record' key={plant.id}>
-                                {/* sezione preferiti */}
+
+                                {/* SEZIONE PREFERITI */}
                                 <div className="button_like">
                                     <button onClick={() => toggleFavorite(plant)} className="button_fav">
                                         {isFavorite(plant.id) ? (
@@ -178,13 +190,13 @@ export default function HomePage() {
                                         )}
                                     </button>
                                 </div>
-                                {/* sezione immagine */}
+                                {/* SEZIONE IMMAGINE */}
                                 <div className='container_image'>
                                     <h3 className='title_plant'>{plant.title}</h3>
                                     <p className='font_category'>Categoria: {plant.category}</p>
 
-                                    {/* link per la pagina di dettaglio */}
 
+                                    {/* link per la pagina di dettaglio */}
                                     <Link to={`/plants/${plant.id}`} className='button_detail'>Vedi dettagli</Link>
 
                                 </div>

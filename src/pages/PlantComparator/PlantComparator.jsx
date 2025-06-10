@@ -7,25 +7,26 @@ import PlantCompareSelector from '../../components/PlantCompareSelector/PlantCom
 import PlantCard from '../../components/PlantCard/PlantCard';
 
 
+// omponente genitore
 export default function PlantComparator() {
     const navigate = useNavigate();
 
-    // stati che memorizzano gli ID delle piante selezionate dall'utente,inizialmente sono null e quindi mostrerà seleziona una pianta
+    // stati che memorizzano gli ID delle piante selezionate dall'utente e che cambiano nel tempo ,inizialmente sono null e quindi mostrerà seleziona una pianta
     const [selectedPlantId1, setSelectedPlantId1] = useState(null);
     const [selectedPlantId2, setSelectedPlantId2] = useState(null);
 
-    // stati che memorizzano i dati delle piante (titolo, descrizione, prezzo, ecc.)
+    // stati che memorizzano i dati delle piante e che cambiano nel tempo (titolo, descrizione, prezzo, ecc.)
     const [plant1Data, setPlant1Data] = useState(null);
     const [plant2Data, setPlant2Data] = useState(null);
 
-    // stato che memorizza l'intera lista di tutte le piante disponibili, visibili nel dropwdown
+    // stato che memorizza l'intera lista di tutte le piante disponibili, visibili nel dropwdown e che cambiano nel tempo
     const [allPlants, setAllPlants] = useState([]);
 
     // Stati per gestire il caricamento dati
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // funzione che permette di caricare la lista dekle piante per popolare i dropdown 
+    // funzione che permette di caricare la lista delle piante per popolare i dropdown, (useEffect si esegue una sola volta al montagio inizile del componente)
     useEffect(() => {
         const fetchAllPlants = async () => {
             setLoading(true);
@@ -33,9 +34,11 @@ export default function PlantComparator() {
 
             try {
                 const response = await fetch(`http://localhost:3001/plants`);
+                // se la riposta non è ok lancia un messaggio
                 if (!response.ok) {
                     throw new Error(`Errore nel caricamento della lista di piante: ${response.statusText}`);
                 }
+                // altrimenti converti la risposta al JSON e aggiorna lo stato con tutta la lista delle piante
                 const data = await response.json();
                 setAllPlants(data);
             } catch (e) {
@@ -53,7 +56,7 @@ export default function PlantComparator() {
     // funzione che permette di caricare i dettagli delle piante selezionate 
     useEffect(() => {
         const fetchSelectedPlants = async () => {
-            // Resetta i dati delle piante visualizzate e gli errori ogni volta che la selezione cambia.
+            // Resetta i dati delle piante visualizzate 
             setPlant1Data(null);
             setPlant2Data(null);
 
@@ -140,16 +143,17 @@ export default function PlantComparator() {
 
 
             {/* Bottone per pulire le selezioni */}
+            {/* se almeno uno delle due piante è stata selezionata mostra il bottono per svuoltre la comparazione */}
             {(selectedPlantId1 || selectedPlantId2) && (
                 <button
                     className="clear_button"
                     onClick={() => {
-                        // Quando cliccato, queste funzioni resettano tutti gli stati di selezione e dati delle piante a null.
+                        // al click queste funzioni resettano tutti gli stati di selezione e dati delle piante a null.
                         setSelectedPlantId1(null);
                         setPlant1Data(null);
                         setSelectedPlantId2(null);
                         setPlant2Data(null);
-                        setError(null); // Resetta anche eventuali errori
+                        setError(null);
                     }}
 
                 >

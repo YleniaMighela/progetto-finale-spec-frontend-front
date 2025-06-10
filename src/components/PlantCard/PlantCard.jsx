@@ -5,7 +5,7 @@ import './PlantCard.css';
 
 // Il componente PlantCard riceve un oggetto plant come prop
 export default function PlantCard({ plant }) {
-    // Se 'plant' non è definito, puoi renderizzare un messaggio vuoto o un errore
+    // Se 'plant' non è definito o è vuoto mostra un messaggio
     if (!plant) {
         return <div>Nessuna pianta selezionata.</div>;
     }
@@ -13,7 +13,9 @@ export default function PlantCard({ plant }) {
     return (
         <div className='plant_card'>
             <h2 className='title_plant'>{plant.title}</h2>
+            {/* se la proprietà image esiste e contiene almeno un'immagine, e quindi entrambi le condizioni sono vere allora*/}
             {plant.image && plant.image.length > 0 && (
+                // mostrami la pirma immagine dell'array con indice 0
                 <img src={plant.image[0]} alt={plant.title} className='plant_image' />
             )}
             <p className='font_category'>Categoria: {plant.category}</p>

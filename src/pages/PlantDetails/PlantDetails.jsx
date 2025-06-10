@@ -1,14 +1,19 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useFavorites } from '../../context/FavoritesContext';
-// importo il css
-import './PlantDetails.css'
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faDroplet, faEuroSign, faHandHoldingHeart, faTemperatureEmpty, faLeaf } from "@fortawesome/free-solid-svg-icons";
 
+// importo il context
+import { useFavorites } from '../../context/FavoritesContext';
+
+// importo il css
+import './PlantDetails.css'
+
+
 export default function PlantDetails() {
+    // ti permette di navigare tra le diverse rotte selezionate
     const navigate = useNavigate();
+    // hook che ti permette di estrarre i parametri dinamici coe in questo caso l'id
     const { id } = useParams();
     const [plant, setPlant] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -30,10 +35,13 @@ export default function PlantDetails() {
                     const errorData = await response.json().catch(() => ({ message: 'Errore sconosciuto' }));
                     throw new Error(`HTTP error! status: ${response.status}. Messaggio: ${errorData.message || 'Errore generico.'}`);
                 }
+
+                // 
                 const data = await response.json();
 
-
+                // se l'oggeto data esiste e contiente al suo interno le proprietà plant
                 if (data && data.plant) {
+                    // allora ggiornamela con i dettagli della piante che sono stati recuperati
                     setPlant(data.plant);
                 } else {
                     throw new Error("Dati pianta non trovati nella risposta del server.");
@@ -48,7 +56,7 @@ export default function PlantDetails() {
         };
 
         fetchPlant();
-    }, [id]);
+    }, [id]);  //  il fetch viene rieseguito ogni volta che l'ID cambi
 
     if (loading) return <div>Caricamento...</div>;
     if (error) return <div>Errore: {error}</div>;
@@ -56,16 +64,18 @@ export default function PlantDetails() {
 
     return (
         <div className='container_detail'>
+            {/* BOTTONE PER TORNARE INDIETRO */}
             <button onClick={() => navigate("/")} className="button_back">⬅ Torna indietro</button>
+
             <h1 className='title_plant'>{plant.title}</h1>
             <p className='font_category'>Categoria: {plant.category}</p>
 
 
-            {/* Nuovo bottone per aggiungere/rimuovere dai preferiti */}
+            {/* BOTTONE PER AGGIUNGERE O RIMUOVERE I PREFERITI */}
             <div className="favorite_button_container">
                 <button
                     onClick={() => toggleFavorite(plant)}
-                    className="button_fav_detail" // Usa una classe specifica per lo stile
+                    className="button_fav_detail"
                 >
                     {isFavorite(plant.id) ? (
                         <span className="heart_filled_detail">♥ Aggiunto ai Preferiti</span>
@@ -74,6 +84,8 @@ export default function PlantDetails() {
                     )}
                 </button>
             </div>
+
+            {/* SEZIONE IMMAGINE RECORD */}
             <div className='detail'>
                 {plant.image && plant.image.map((imgPath, index) => (
                     <img
@@ -84,6 +96,7 @@ export default function PlantDetails() {
                     />
                 ))}
 
+                {/* SEZIONE DESSCRIZONE CON ICONE */}
                 <div className='container_description' >
                     <p><FontAwesomeIcon icon={faLeaf} className='description' /><strong> Descrizione: </strong>{plant.description}</p>
                     <p><FontAwesomeIcon icon={faSun} className='sun' /><strong> Esposizione: </strong>  {plant.light}</p>

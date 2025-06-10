@@ -1,7 +1,7 @@
 // importo il css
 import './PlantCompareSelector.css';
 
-//  props che qriceve da PlantComparator (plants: è l'array di oggetti della pianta, selectedId: sarà l'id dela pianta selezionata,onSelect:funzione che permette di passare l'id dell pianta selezionata dall'utente)
+//  props che riceve da PlantComparator (plants: è l'array di oggetti della pianta, selectedId: sarà l'id della pianta selezionata,onSelect:funzione che permette di passare l'id della pianta selezionata dall'utente)
 export default function PlantCompareSelector({ plants, selectedId, onSelect }) {
     return (
         <div className="container_compare">
