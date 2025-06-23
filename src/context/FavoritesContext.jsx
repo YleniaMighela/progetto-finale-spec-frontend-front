@@ -11,9 +11,9 @@ export const FavoritesProvider = ({ children }) => {
 
     // funzione che permette di aggiungere e rimuovere le piante dai preferiti
     const toggleFavorite = (plant) => {
-        // funzione di aggiornamento setFavorites che riceve la funzione con l'elenco precedente
+        // setFavorites funzione di aggiornamento che riceve l'elenco ggiornato delle lista
         setFavorites((prevFavorites) =>
-            // se la pianta è già presente tra i prferiti
+            // se almeno una pianta è già presente tra i prferiti
             prevFavorites.some((fav) => fav.id === plant.id)
                 // la rimuove filtrandolo fuori
                 ? prevFavorites.filter((fav) => fav.id !== plant.id)

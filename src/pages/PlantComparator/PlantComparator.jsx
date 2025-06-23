@@ -56,7 +56,7 @@ export default function PlantComparator() {
     // funzione che permette di caricare i dettagli delle piante selezionate 
     useEffect(() => {
         const fetchSelectedPlants = async () => {
-            // Resetta i dati delle piante visualizzate 
+            // Resetta i dati delle piante selezionate
             setPlant1Data(null);
             setPlant2Data(null);
 
@@ -97,7 +97,7 @@ export default function PlantComparator() {
 
         fetchSelectedPlants();
     },
-        // Dipendenze: questo effect si riesegue se uno degli ID cambia.
+        // Dipendenze: questo effect si ri aggiorna se uno degli ID cambia.
         [selectedPlantId1, selectedPlantId2]);
 
     if (loading && (allPlants.length === 0 || !plant1Data || !plant2Data)) return <div className='comparator_container'>Caricamento dati...</div>;
@@ -113,14 +113,14 @@ export default function PlantComparator() {
 
                 {/* Primo selettore di piante (dropdown) */}
                 <PlantCompareSelector
-                    plants={allPlants}              // Passa la lista completa di piante al dropdown
+                    plants={allPlants}              // Passa la lista completa di piante da scegliere al dropdown
                     selectedId={selectedPlantId1}   // Passa l'ID attualmente selezionato per il primo dropdown
                     onSelect={setSelectedPlantId1}  // Passa la funzione per aggiornare selectedPlantId1 quando l'utente sceglie
                 />
 
                 {/* Secondo selettore di piante (dropdown) */}
                 <PlantCompareSelector
-                    plants={allPlants}              // Passa la lista completa di piante al secondo dropdown
+                    plants={allPlants}              // Passa la lista completa di piante da scegliere al secondo dropdown
                     selectedId={selectedPlantId2}   // Passa l'ID attualmente selezionato per il secondo dropdown
                     onSelect={setSelectedPlantId2}  // Passa la funzione per aggiornare selectedPlantId2 quando l'utente sceglie
 

@@ -77,9 +77,9 @@ export default function HomePage() {
 
     // filtro le piante che includono il titolo che viene inserito nel campo di ricerca
     const filterAndCategoryPlant = plants.filter(plant => {
-        // verifica se il titolo di una pianta include una specifica parola che l'utente sta cercando, ignorando se le lettere sono maiuscole o minuscole.
+        // Verifica se il titolo della pianta contiene il testo cercato dall'utente, senza distinguere maiuscole e minuscole, perchè convertito con il toLowerCase
         const searchTitle = plant.title.toLowerCase().includes(search.toLowerCase());
-        // verifica se la categoria della pianta corrisponde alla categoria che l'utente ha selezionato
+        // verifica se l'utenta non ha selezionato nullo oppure se la categoria della pianta corrisponde alla categoria che l'utente ha selezionato (senza distinzione di maiuscole e minuscole)
         const selectCategory = category === '' || category === 'Seleziona' || plant.category.toLowerCase() === category.toLowerCase();
         // se entrambe sono true restituisci titolo e categorie nell'array filterAndCategoryPlant
         return searchTitle && selectCategory;
@@ -89,19 +89,19 @@ export default function HomePage() {
 
     // ordino le piante filtrate, prendo tutto quello che è presente nell'array filtrato e ne creo una copia con lo spread
     const sortPlants = [...filterAndCategoryPlant].sort((a, b) => {
-        // se l'ordinamento per il titolo è ascendente ritorna dalla a-z 
+        // se l'ordinamento per il titolo scelto dall'utente è ascendente ritorna i titoli dalla a-z 
         if (sortBy === 'ascendente') {
             return a.title.localeCompare(b.title)
         }
-        // altrimenti se l'ordinamento per il titolo è discendente ritorna dalla z-a 
+        // altrimenti se l'ordinamento per il titolo scelto dall'utente  è discendente i titoli  ritorna dalla z-a 
         else if (sortBy === 'discendente') {
             return b.title.localeCompare(a.title);
         }
-        // altrimenti se  l'ordinamento per la categoria è ascendente ritorna dalla a-z 
+        // altrimenti se  l'ordinamento per la categoria scelto dall'utente  è ascendente ritorna le categorie dalla a-z 
         else if (sortBy === 'categoryasc') {
             return a.category.localeCompare(b.category);
         }
-        // altrimenti se l'ordinamento per la categoria è discendente ritorna dalla z-a 
+        // altrimenti se l'ordinamento per la categoria scelto dall'utente  è discendente ritorna le categorie dalla z-a 
         else if (sortBy === 'categorydisc') {
             return b.category.localeCompare(a.category);
         }

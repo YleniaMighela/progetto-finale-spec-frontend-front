@@ -19,11 +19,12 @@ export default function PlantDetails() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // hooh per gestione preferiti dal context globale
+    // hook per gestione preferiti dal context globale
     const { toggleFavorite, isFavorite } = useFavorites();
 
     useEffect(() => {
         const fetchPlant = async () => {
+            // se l'id non è presente mostra errore
             if (!id) {
                 setLoading(false);
                 setError("ID pianta non fornito nell'URL.");
@@ -36,12 +37,12 @@ export default function PlantDetails() {
                     throw new Error(`HTTP error! status: ${response.status}. Messaggio: ${errorData.message || 'Errore generico.'}`);
                 }
 
-                // 
+                // estraggo i dati json dall risposta
                 const data = await response.json();
 
-                // se l'oggeto data esiste e contiente al suo interno le proprietà plant
+                // se l'oggetto data esiste e contiente al suo interno le proprietà plant
                 if (data && data.plant) {
-                    // allora ggiornamela con i dettagli della piante che sono stati recuperati
+                    // allora aggiornamela con i dettagli della piante che sono stati recuperati
                     setPlant(data.plant);
                 } else {
                     throw new Error("Dati pianta non trovati nella risposta del server.");
@@ -87,6 +88,7 @@ export default function PlantDetails() {
 
             {/* SEZIONE IMMAGINE RECORD */}
             <div className='detail'>
+                {/* se plant.image esiste allora eseguo il map sull'array di immagini */}
                 {plant.image && plant.image.map((imgPath, index) => (
                     <img
                         key={index}

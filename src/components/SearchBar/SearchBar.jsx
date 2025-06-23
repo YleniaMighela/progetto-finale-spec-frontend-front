@@ -1,5 +1,6 @@
 import './SearchBar.css'
 
+//  prop ereditate dalla Home attraverso lo stato locale che aggiorna lo stato con il nuovo vlore inserito nella ricerca
 export default function SearchBar({ search, setSearch }) {
 
     return (

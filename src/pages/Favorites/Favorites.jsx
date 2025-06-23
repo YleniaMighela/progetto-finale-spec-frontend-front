@@ -6,7 +6,7 @@ export default function FavoritesPage() {
     // hook che serve per navigare tra le pagine
     const navigate = useNavigate();
 
-    // destrutto l'oggetto dal context
+    // destrutto l'oggetto dal context (favorites lista dei preferiti,toggleFavorite aggiunge/rimuove i preferiti, isFavorite la pianta è già presente)
     const { favorites, toggleFavorite, isFavorite } = useFavorites();
 
     // se la lista de preferiti è vuota mostra un messaggio 
@@ -47,7 +47,7 @@ export default function FavoritesPage() {
                             </button>
                         </div>
 
-
+                        {/* record con titolo e immagine */}
                         <h3 className='title_plant'>{plant.title}</h3>
                         {plant.image && plant.image.length > 0 && (
                             <img
